@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+
+.section {
+  display: block;
+  width: 100%;
+  padding-top: 20em;
+  padding-left: 7em;
+  height: 25em;
+  background: #121212;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.pg1-title {
+  font-family: "Titillium Web";
+  font-size: 4em;
+  text-align: left;
+  color: rgb(227, 227, 227);
+}
+
+.pg1-text-scrolldown {
+  font-size: 1.16em;
+  line-height : center;
+  margin-left: 0.5em;
+  color: rgb(201, 201, 201);
+}
+
+.pg1-icon-scrolldown {
+  width: 40px;
+  height: 40px;
+  rotate: 90deg;
+}
+
+.pg1-box-underline {
+  height: 0.75em;
+  width: 0em;
+  background: linear-gradient(90deg, rgba(73,233,255,0.7) 0%, rgba(146,135,255,0.7) 100%);
+  animation: underline-animation 2s ease-in-out forwards;
+}
+
+.pg1-box-blank {
+  width: 21.7em;
+  background: rgba(0, 0, 0, 0);
+}
+
+.pg1-area-underline{
+  display: flex;
+  flex-direction: row;
+}
+
+.pg1-area-scrolldown{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2em;
+  align-items : center;
+  color: rgb(201, 201, 201);
+}
+
+@keyframes underline-animation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 25.3em;
+  }
+}
