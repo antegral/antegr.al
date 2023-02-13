@@ -7,6 +7,7 @@ import LinearProgress, {
 import "./css/App.css";
 import "./css/GetTitleSection.css";
 import "./css/GetNavBar.css";
+import "./css/GetIntroduceSection.css";
 import ArrowIcon from "./icons/next-single-arrow.svg";
 import AntegralIcon from "./icons/antegral-9.png";
 
@@ -33,6 +34,7 @@ function App() {
     <div>
       <GetNavBar />
       <GetTitleSection />
+      <GetIntroduceSection />
     </div>
   );
 }
@@ -74,11 +76,10 @@ function GetNavBar() {
 function GetTitleSection() {
   return (
     <div className="pg1-section">
-      <h1 className="pg1-title">Hunting the Interest things</h1>
-      <div className="pg1-area-underline">
-        <div className="pg1-box-blank"></div>
-        <div className="pg1-box-underline"></div>
-      </div>
+      <h1 className="pg1-title">Hunting the&nbsp;</h1>
+      <br />
+      <h1 className="pg1-title-underline">Interest</h1>
+      <h1 className="pg1-title">&nbsp;things</h1>
       <div className="pg1-area-scrolldown">
         <img
           className="pg1-icon-scrolldown"
@@ -97,13 +98,17 @@ function GetTitleSection() {
         <p className="pg1-text-cardunselect" id="card-btn-03">
           03
         </p>
-        <BorderLinearProgress
-          value={80}
-          variant="determinate"
-          title="test"
-          style={{ width: "10em", marginLeft: "1.2em" }}
-        />
+        <BorderLinearProgress style={{ width: "10em", marginLeft: "1.2em" }} />
       </div>
+    </div>
+  );
+}
+
+function GetIntroduceSection() {
+  return (
+    <div className="pg2-section">
+      <h2 className="pg2-title">Introduction</h2>
+      <h3 className="pg2-name">SeongUk Moon</h3>
     </div>
   );
 }
