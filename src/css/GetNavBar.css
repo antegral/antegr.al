@@ -1,0 +1,46 @@
+.nav-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 7em;
+  padding-right: 7em;
+
+  height: 3em;
+  background: linear-gradient(180deg, rgb(12, 12, 12) 0%, rgba(12, 12, 12, 0.8) 70%, rgba(12, 12, 12, 0.13) 100%);
+}
+
+.nav-icon-antegral {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-text-menu {
+  color: white;
+  margin-left: 4em;
+  margin-right: 4em;
+  font-family: "Pretendard";
+  font-weight: bold;
+  text-decoration: none
+}
+
+.nav-area-innermenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-area-loginbtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}

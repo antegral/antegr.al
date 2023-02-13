@@ -1,76 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
-
-.section {
-  display: block;
-  width: 100%;
-  padding-top: 20em;
-  padding-left: 7em;
-  height: 25em;
-  background: #121212;
-}
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;700&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
 
 html {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   overflow-x: hidden;
-  overflow-y: hidden;
+
 }
 
 body {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
-.pg1-title {
-  font-family: "Titillium Web";
-  font-size: 4em;
-  text-align: left;
-  color: rgb(227, 227, 227);
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.pg1-text-scrolldown {
-  font-size: 1.16em;
-  line-height : center;
-  margin-left: 0.5em;
-  color: rgb(201, 201, 201);
+/* Track */
+::-webkit-scrollbar-track {
+  background: #313131; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6f6f6f
 }
 
-.pg1-icon-scrolldown {
-  width: 40px;
-  height: 40px;
-  rotate: 90deg;
-}
-
-.pg1-box-underline {
-  height: 0.75em;
-  width: 0em;
-  background: linear-gradient(90deg, rgba(73,233,255,0.7) 0%, rgba(146,135,255,0.7) 100%);
-  animation: underline-animation 2s ease-in-out forwards;
-}
-
-.pg1-box-blank {
-  width: 21.7em;
-  background: rgba(0, 0, 0, 0);
-}
-
-.pg1-area-underline{
-  display: flex;
-  flex-direction: row;
-}
-
-.pg1-area-scrolldown{
-  display: flex;
-  flex-direction: row;
-  margin-top: 2em;
-  align-items : center;
-  color: rgb(201, 201, 201);
-}
-
-@keyframes underline-animation {
-  from {
-    width: 0;
-  }
-  to {
-    width: 25.3em;
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
