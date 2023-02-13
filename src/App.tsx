@@ -10,6 +10,7 @@ import "./css/GetNavBar.css";
 import "./css/GetIntroduceSection.css";
 import ArrowIcon from "./icons/next-single-arrow.svg";
 import AntegralIcon from "./icons/antegral-9.png";
+import MockupBedges from "./images/mockup_bedges.png";
 
 const LoginButton = styled(Button)<ButtonProps>(({ theme }) => ({
   color: theme.palette.getContrastText("#00000"),
@@ -107,8 +108,33 @@ function GetTitleSection() {
 function GetIntroduceSection() {
   return (
     <div className="pg2-section">
-      <h2 className="pg2-title">Introduction</h2>
-      <h3 className="pg2-name">SeongUk Moon</h3>
+      <h2 className="pg2-text-title">Introduction</h2>
+      <div className="pg2-area-divide">
+        <div className="pg2-area-introduce">
+          <h3 className="pg2-text-name">SeongUk Moon</h3>
+          <p className="pg2-text-introduce">
+            흥미를 돋울만한 여러 프로젝트들을 개발하고 있는 학생 개발자입니다.
+            <br />
+            Typescript, Golang을 사용해서 웹 개발을 주력으로 하고 있습니다.
+            <br />
+            요즘에는 서버를 운영하고 있고, 서버 메인 웹사이트도 방문해보시는 걸
+            추천드립니다.
+          </p>
+        </div>
+        <img
+          className="nav-image-mockupbedges"
+          src={MockupBedges}
+          alt="MockupBedges"
+        ></img>
+      </div>
+      <div className="pg1-area-scrolldown">
+        <img
+          className="pg1-icon-scrolldown"
+          src={ArrowIcon}
+          alt="Arrow Icon"
+        ></img>
+        <p className="pg1-text-scrolldown">아래로 넘기세요</p>
+      </div>
     </div>
   );
 }
