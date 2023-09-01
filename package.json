@@ -1,8 +1,8 @@
 {
-  "name": "antegral-mainpage",
+  "name": "antegr.al",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://antegral.github.io",
+  "homepage": "https://antegral.github.io/antegr.al",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
