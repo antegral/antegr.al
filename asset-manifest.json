@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.195acf18.css",
-    "main.js": "/static/js/main.18c3ff34.js",
-    "static/js/787.27a4175f.chunk.js": "/static/js/787.27a4175f.chunk.js",
-    "index.html": "/index.html",
-    "main.195acf18.css.map": "/static/css/main.195acf18.css.map",
-    "main.18c3ff34.js.map": "/static/js/main.18c3ff34.js.map",
-    "787.27a4175f.chunk.js.map": "/static/js/787.27a4175f.chunk.js.map"
+    "main.css": "/antegr.al/static/css/main.7c7caba4.css",
+    "main.js": "/antegr.al/static/js/main.e6929fc6.js",
+    "static/js/787.be165a71.chunk.js": "/antegr.al/static/js/787.be165a71.chunk.js",
+    "index.html": "/antegr.al/index.html",
+    "main.7c7caba4.css.map": "/antegr.al/static/css/main.7c7caba4.css.map",
+    "main.e6929fc6.js.map": "/antegr.al/static/js/main.e6929fc6.js.map",
+    "787.be165a71.chunk.js.map": "/antegr.al/static/js/787.be165a71.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.195acf18.css",
-    "static/js/main.18c3ff34.js"
+    "static/css/main.7c7caba4.css",
+    "static/js/main.e6929fc6.js"
   ]
 }
