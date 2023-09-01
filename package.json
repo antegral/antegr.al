@@ -1,11 +1,13 @@
 {
   "name": "antegr.al",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://antegral.github.io/antegr.al",
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@icons-pack/react-simple-icons": "^9.0.0",
+    "@mui/joy": "^5.0.0-beta.4",
     "@mui/material": "^5.11.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
