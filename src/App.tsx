@@ -1,139 +1,167 @@
-import React from "react";
-import Button, { ButtonProps } from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
-import LinearProgress, {
-  linearProgressClasses,
-} from "@mui/material/LinearProgress";
+import { useRef } from "react";
+import border from "./assets/vertical-border.svg";
+import EmailIcon from "./css/icons/email.svg";
+import ServerIcon from "./css/icons/server.svg";
+import LockIcon from "./css/icons/lock.svg";
 import "./css/App.css";
-import "./css/GetTitleSection.css";
-import "./css/GetNavBar.css";
-import "./css/GetIntroduceSection.css";
-import ArrowIcon from "./icons/next-single-arrow.svg";
-import AntegralIcon from "./icons/antegral-9.png";
-import MockupBedges from "./images/mockup_bedges.png";
-
-const LoginButton = styled(Button)<ButtonProps>(({ theme }) => ({
-  color: theme.palette.getContrastText("#00000"),
-}));
-
-const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
-  height: 3,
-  borderRadius: 0,
-  [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor:
-      theme.palette.grey[theme.palette.mode === "dark" ? 200 : 800],
-  },
-  [`& .${linearProgressClasses.bar}`]: {
-    borderRadius: 0,
-    background:
-      "linear-gradient(90deg, rgb(73,233,255) 0%, rgb(146,135,255) 100%)",
-  },
-}));
+import "./css/reset.css";
+import { IconButton } from "@mui/material";
+import {
+  SiGithub,
+  SiLinkedin,
+  SiTistory,
+  SiOpenwrt,
+} from "@icons-pack/react-simple-icons";
+import { Typography, List, ListItem, ListItemDecorator } from "@mui/joy";
 
 function App() {
+  const flipCardInnerRef = useRef<HTMLInputElement>(null);
+
+  const handleClick = () => {
+    if (!flipCardInnerRef.current) {
+      return;
+    }
+    flipCardInnerRef.current.classList.toggle("flipped");
+  };
+
   return (
-    <div>
-      <GetNavBar />
-      <GetTitleSection />
-      <GetIntroduceSection />
-    </div>
-  );
-}
-
-function GetNavBar() {
-  return (
-    <div className="nav-section">
-      <img
-        className="nav-icon-antegral"
-        src={AntegralIcon}
-        alt="ANTEGRAL Icon"
-      ></img>
-
-      <div className="nav-area-innermenu">
-        <a className="nav-text-menu" href="https://blog.antegral.net">
-          BLOG
-        </a>
-        <a className="nav-text-menu" href="https://service.antegral.net">
-          SERVICE
-        </a>
-        <a className="nav-text-menu" href="https://server.antegral.net">
-          SERVER
-        </a>
-        <a className="nav-text-menu" href="https://github.com/antegral">
-          GITHUB
-        </a>
-        <a className="nav-text-menu" href="mailto:antegral@antegral.net">
-          CONTACT
-        </a>
-      </div>
-
-      <LoginButton variant="text" size="large">
-        SIGN IN
-      </LoginButton>
-    </div>
-  );
-}
-
-function GetTitleSection() {
-  return (
-    <div className="pg1-section">
-      <h1 className="pg1-title">Hunting the&nbsp;</h1>
-      <br />
-      <h1 className="pg1-title-underline">Interest</h1>
-      <h1 className="pg1-title">&nbsp;things</h1>
-      <div className="pg1-area-scrolldown">
-        <img
-          className="pg1-icon-scrolldown"
-          src={ArrowIcon}
-          alt="Arrow Icon"
-        ></img>
-        <p className="pg1-text-scrolldown">아래로 넘기세요</p>
-      </div>
-      <div className="pg1-area-cardstatus">
-        <p className="pg1-text-cardselect" id="card-btn-01">
-          01
-        </p>
-        <p className="pg1-text-cardunselect" id="card-btn-02">
-          02
-        </p>
-        <p className="pg1-text-cardunselect" id="card-btn-03">
-          03
-        </p>
-        <BorderLinearProgress style={{ width: "10em", marginLeft: "1.2em" }} />
-      </div>
-    </div>
-  );
-}
-
-function GetIntroduceSection() {
-  return (
-    <div className="pg2-section">
-      <h2 className="pg2-text-title">Introduction</h2>
-      <div className="pg2-area-divide">
-        <div className="pg2-area-introduce">
-          <h3 className="pg2-text-name">SeongUk Moon</h3>
-          <p className="pg2-text-introduce">
-            흥미를 돋울만한 여러 프로젝트들을 개발하고 있는 학생 개발자입니다.
-            <br />
-            Typescript, Golang을 사용해서 웹 개발을 주력으로 하고 있습니다.
-            <br />
-            요즘에는 서버를 운영하고 있고, 서버 메인 웹사이트도 방문해보시는 걸
-            추천드립니다.
-          </p>
+    <div className="background">
+      <div className="card" onClick={handleClick}>
+        <div className="card-inner" ref={flipCardInnerRef}>
+          <div className="card-front">
+            <div className="card-container">
+              <div>
+                <div className="icon-title"></div>
+                <p className="label-name">SeongUk Moon</p>
+                <p className="label-nickname">ANTEGRAL</p>
+                <div
+                  className="social-buttons"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <IconButton href="https://antegr.al/github">
+                    <SiGithub color="White"></SiGithub>
+                  </IconButton>
+                  <IconButton href="https://www.linkedin.com/in/antegral/">
+                    <SiLinkedin color="White"></SiLinkedin>
+                  </IconButton>
+                  <IconButton href="mailto:antegral@antegral.net">
+                    <img
+                      className="email-icon"
+                      src={EmailIcon}
+                      alt="Email Icon"
+                    />
+                  </IconButton>
+                  <IconButton href="https://antegr.al/blog">
+                    <SiTistory color="White"></SiTistory>
+                  </IconButton>
+                </div>
+              </div>
+              <img
+                className="vertical-border"
+                src={border}
+                alt="vertical border"
+              />
+              <div className="content-container">
+                <Typography
+                  id="decorated-list-demo"
+                  level="body-xs"
+                  textTransform="uppercase"
+                  fontWeight="lg"
+                  mb={1}
+                >
+                  What I do
+                </Typography>
+                <div>
+                  <ul>
+                    <li>Infrastructure Management</li>
+                    <li>Web Development</li>
+                    <li>Machine Learning</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="tip-container">
+              <p>card.onclick = (event) =&gt; filpCard();</p>
+            </div>
+          </div>
+          <div className="card-back">
+            <div className="card-container">
+              <div>
+                <p className="label-back-title">My Projects</p>
+                <List aria-labelledby="decorated-list">
+                  <ListItem
+                    sx={{
+                      typography: {
+                        color: "#e6e6e6",
+                        fontFamily: "Titillium Web",
+                      },
+                    }}
+                  >
+                    <ListItemDecorator>
+                      <IconButton
+                        href="https://github.com/antegral/RionsKey"
+                        onClick={(e) => e.stopPropagation()}
+                        size="small"
+                      >
+                        <img
+                          className="label-back-icon"
+                          src={LockIcon}
+                          alt="Lock Icon"
+                        />
+                      </IconButton>
+                    </ListItemDecorator>
+                    Keypad-Security System Wrapper
+                  </ListItem>
+                  <ListItem
+                    sx={{
+                      typography: {
+                        color: "#e6e6e6",
+                        fontFamily: "Titillium Web",
+                      },
+                    }}
+                  >
+                    <ListItemDecorator>
+                      <IconButton
+                        href="https://git.openwrt.org/?p=openwrt/openwrt.git;a=commit;h=9c8ccdcdc86c46e8be52f20e3668f67eff94c8c0"
+                        onClick={(e) => e.stopPropagation()}
+                        size="small"
+                      >
+                        <SiOpenwrt color="White"></SiOpenwrt>
+                      </IconButton>
+                    </ListItemDecorator>
+                    Contribute OpenWrt
+                  </ListItem>
+                  <ListItem
+                    sx={{
+                      typography: {
+                        color: "#e6e6e6",
+                        fontFamily: "Titillium Web",
+                      },
+                    }}
+                  >
+                    <ListItemDecorator>
+                      <IconButton
+                        href="https://antegr.al/servers"
+                        onClick={(e) => e.stopPropagation()}
+                        size="small"
+                      >
+                        <img
+                          className="label-back-icon"
+                          src={ServerIcon}
+                          alt="Server Icon"
+                        />
+                      </IconButton>
+                    </ListItemDecorator>
+                    Infrastructure Management
+                  </ListItem>
+                </List>
+              </div>
+            </div>
+            <div className="tip-container">
+              <p>To check out more of my projects, visit my Github profile!</p>
+            </div>
+          </div>
         </div>
-        <img
-          className="nav-image-mockupbedges"
-          src={MockupBedges}
-          alt="MockupBedges"
-        ></img>
-      </div>
-      <div className="pg1-area-scrolldown">
-        <img
-          className="pg1-icon-scrolldown"
-          src={ArrowIcon}
-          alt="Arrow Icon"
-        ></img>
-        <p className="pg1-text-scrolldown">아래로 넘기세요</p>
       </div>
     </div>
   );
